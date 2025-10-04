@@ -21,14 +21,12 @@ const AudioPlayer = () => {
         }
     };
 
-    // 🕒 Guardar la duración cuando el audio carga
     const handleLoadedMetadata = () => {
         if (audioElement.current) {
             setDuration(audioElement.current.duration);
         }
     };
 
-    // ⏱️ Formatear segundos a mm:ss
     const formatTime = (seconds: number) => {
         const min = Math.floor(seconds / 60);
         const sec = Math.floor(seconds % 60);
